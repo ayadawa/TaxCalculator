@@ -1,10 +1,6 @@
 /**
  * TaxCalculator.
- * This class encapsulates a tax calculation. If the
- * tax calculation is based purely on amount, then 
- * this class will work, but you will need to
- * extend this class using inheritance to calculate
- * more complex taxes.
+ * This class encapsulates a tax calculation. 
  */
 public class TaxCalculator
 {
@@ -19,8 +15,7 @@ public class TaxCalculator
 	public void setTaxRate(double newRate){ this.taxRate = newRate; }
 	
 	/**
-	 * calculateTax. Return the tax on the dollar amount
-	 * in originalAmount.
+	 * calculateTax. 
 	 * 
 	 * @param originalAmount the cost to tax
 	 * @return the tax on that amount
