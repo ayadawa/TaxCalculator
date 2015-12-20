@@ -1,0 +1,32 @@
+
+public class WarioLandTaxCalculator extends TaxCalculator
+{
+	private double tax; 
+ 
+	public static final double TAX_RATE = 0.01; 
+		 
+		public  WarioLandTaxCalculator() 
+		{
+			super(TAX_RATE);
+	
+		}
+	
+	public double calculateTax(double originalAmount)
+	{
+		String Value = String.valueOf(originalAmount);
+		tax = 10.0 + super.calculateTax(originalAmount);
+		if (Value.contains("5")  )
+		{
+			tax = super.calculateTax(originalAmount)+10.0 + 0.05*originalAmount;
+		}
+	
+		return tax;
+	}
+	@Override
+	public String toString()
+	
+	   {
+			return "WarioLandTaxCalculator[taxRate=0.01]"; 
+	   }
+	
+	}
