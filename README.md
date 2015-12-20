@@ -1,0 +1,31 @@
+
+public class MarioWorldTaxCalculator extends TaxCalculator
+{
+	private double tax;
+	private double weightInPounds;
+	public static final double taxRate= 0.04; 
+	 
+	public  MarioWorldTaxCalculator(double weightInPounds) 
+	{
+		super(taxRate);		
+		if (weightInPounds >= 100)
+		{
+			super.setTaxRate(0.08);
+		} 
+	}
+
+	public double calculateTax(Double weightInPounds)
+		{
+		tax = super.calculateTax(weightInPounds.doubleValue());
+		weightInPounds = weightInPounds.doubleValue();
+		return tax; 
+		}
+	
+   
+@Override
+public String toString()
+   {
+	
+	return "MarioWorldTaxCalculator[taxRate=" + super.getTaxRate() + "]";
+   }
+}
